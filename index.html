@@ -26,7 +26,7 @@
     /* CSS cho liên kết */
     a {
       display: block;
-      padding: 10px 20px;
+      padding: 10px;
       background-color: #ddd;
       color: #333;
       text-decoration: none;
@@ -37,14 +37,44 @@
     a:hover {
       background-color: #ccc;
     }
+
+    /* CSS cho chữ mô tả nằm giữa ô */
+    .link-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .link-description {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
   <h1>Trang web với liên kết dẫn đến các trang web khác</h1>
   <ul>
-    <li><a href="https://www.example1.com">Liên kết đến trang web 1</a></li>
-    <li><a href="https://www.example2.com">Liên kết đến trang web 2</a></li>
-    <li><a href="https://www.example3.com">Liên kết đến trang web 3</a></li>
+    <li>
+      <div class="link-wrapper">
+        <a href="https://www.example1.com">
+          <p class="link-description">Liên kết đến trang web 1</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="link-wrapper">
+        <a href="https://www.example2.com">
+          <p class="link-description">Liên kết đến trang web 2</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="link-wrapper">
+        <a href="https://www.example3.com">
+          <p class="link-description">Liên kết đến trang web 3</p>
+        </a>
+      </div>
+    </li>
   </ul>
 </body>
 </html>
