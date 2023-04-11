@@ -2,40 +2,22 @@
 <html>
 
 <head>
-    <title>Trang Web với Hiệu Ứng Nền Tuyết Rơi</title>
+    <title>Trang Web với 12 Ô Dẫn</title>
     <style>
-        body {
-            background-color: #000;
-            overflow: hidden;
-        }
-
-        .snow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.8;
-        }
-
-        .snow img {
-            position: absolute;
-            pointer-events: none;
-            width: 30px;
-            height: 30px;
-        }
-
-        .link-container {
+        .container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             height: 100vh;
         }
 
-        .link-container a {
-            display: block;
-            padding: 20px;
-            margin: 10px;
+        .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 50px;
+            margin-bottom: 10px;
             background-color: #007bff;
             color: #fff;
             text-align: center;
@@ -47,36 +29,20 @@
 </head>
 
 <body>
-    <div class="snow"></div>
-    <div class="link-container">
-        <a href="https://example1.com">Link 1</a>
-        <a href="https://example2.com">Link 2</a>
-        <a href="https://example3.com">Link 3</a>
+    <div class="container">
+        <a class="link" href="https://example1.com">Link 1</a>
+        <a class="link" href="https://example2.com">Link 2</a>
+        <a class="link" href="https://example3.com">Link 3</a>
+        <a class="link" href="https://example4.com">Link 4</a>
+        <a class="link" href="https://example5.com">Link 5</a>
+        <a class="link" href="https://example6.com">Link 6</a>
+        <a class="link" href="https://example7.com">Link 7</a>
+        <a class="link" href="https://example8.com">Link 8</a>
+        <a class="link" href="https://example9.com">Link 9</a>
+        <a class="link" href="https://example10.com">Link 10</a>
+        <a class="link" href="https://example11.com">Link 11</a>
+        <a class="link" href="https://example12.com">Link 12</a>
     </div>
-
-    <script>
-        // Tạo phần tử tuyết rơi
-        function createSnowflake() {
-            const snowflake = document.createElement("img");
-            snowflake.src = "https://i.imgur.com/4g6ZaLt.png";
-            snowflake.style.top = "-30px";
-            snowflake.style.left = Math.random() * window.innerWidth + "px";
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
-            snowflake.style.opacity = Math.random() * 0.5 + 0.2;
-            snowflake.className = "snowflake";
-            document.querySelector(".snow").appendChild(snowflake);
-
-            setTimeout(() => {
-                snowflake.remove();
-            }, 5000);
-        }
-
-        // Gọi hàm tạo tuyết rơi
-        function snowfall() {
-            setInterval(createSnowflake, 100);
-        }
-
-        snowfall();
-    </script>
 </body>
+
 </html>
