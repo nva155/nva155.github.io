@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Trang web với liên kết dẫn đến các trang web khác</title>
-  <style>
-    /* CSS cho trang web */
-    body {
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <title>Trang Web với Hiệu Ứng Nền Tuyết Rơi</title>
+    <style>
+        body {
+            background-color: #000;
+            overflow: hidden;
+        }
 
-    /* CSS cho danh sách liên kết */
-    ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
+        .snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.8;
+        }
 
-    li {
-      margin-bottom: 10px;
-    }
+        .snow img {
+            position: absolute;
+            pointer-events: none;
+            width: 30px;
+            height: 30px;
+        }
 
-    /* CSS cho liên kết */
-    a {
-      display: block;
-      padding: 10px 20px;
-      background-color: #ddd;
-      color: #333;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
+        .link-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    a:hover {
-      background-color: #ccc;
-    }
-  </style>
+        .link-container a {
+            display: block;
+            padding: 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Trang web với liên kết dẫn đến các trang web khác</h1>
-  <ul>
-    <li><a href="http://andeptrai.art.blog/2023/04/10/cach-phat-wifi/">Liên kết đến trang web 1</a></li>
-    <li><a href="https://www.example2.com">Liên kết đến trang web 2</a></li>
-    <li><a href="https://www.example3.com">Liên kết đến trang web 3</a></li>
-  </ul>
+    <div class="snow"></div>
+    <div class="link-container">
+        <a href="https://example1.com">Link 1</a>
+        <a href="https://example2.com">Link 2</a>
+        <a href="https://example3.com">Link 3</a>
+    </div>
+
+    <script>
+        // Tạo phần tử tuyết rơi
+        function createSnowflake() {
+            const snowflake = document.createElement("img");
+            snowflake.src = "https://i.imgur.com/4g6ZaLt.png";
+            snowflake.style.top = "-30px";
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+            snowflake.style.opacity = Math.random() * 0.5 + 0.2;
+            snowflake.className = "snowflake";
+            document.querySelector(".snow").appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        // Gọi hàm tạo tuyết rơi
+        function snowfall() {
+            setInterval(createSnowflake, 100);
+        }
+
+        snowfall();
+    </script>
 </body>
 </html>
