@@ -1,4 +1,21 @@
-body {
-  background-color: black;
-  color: white;
+/* Định dạng cho hiệu ứng bông hoa rơi */
+.snowflake {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.5;
+    animation: snowflakes 3s linear infinite;
+    pointer-events: none;
+}
+
+/* Định nghĩa keyframes cho hiệu ứng bông hoa rơi */
+@keyframes snowflakes {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }
