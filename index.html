@@ -1,63 +1,26 @@
-<html
-
+<!DOCTYPE html>
+<html>
 <head>
+    <title>Chữ chuyển động</title>
+    <style>
+        /* Định nghĩa animation */
+        @keyframes moving-text {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50px); }
+        }
 
-    <title>Card Hover Effect</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-
-        crossorigin="anonymous">
-
+        /* Áp dụng animation vào phần tử chữ cần chuyển động */
+        .moving-text {
+            font-size: 24px;
+            animation-name: moving-text;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    </style>
 </head>
-
 <body>
-
-    <div class="container">
-
-       
-
-        <div class="card">
-
-            <div class="slide slide1">
-
-                <div class="content">
-
-                    <div class="icon">
-
-                        <i class="fa fa-user-circle" aria-hidden="true"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="slide slide2">
-
-                <div class="content">
-
-                    <h3>
-
-                        Có Cái Con Cặtt
-
-                    </h3>
-
-                    <p>Chim cúttt</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        
-
-    </div>
-
+    <!-- Phần tử chữ cần chuyển động -->
+    <p class="moving-text">An đẹp trai</p>
 </body>
-
 </html>
