@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chữ chuyển động</title>
+    <title>Chữ chuyển động ở giữa màn hình</title>
     <style>
+        /* Định dạng đại trà cho body và container */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
         /* Định nghĩa animation */
         @keyframes moving-text {
             0% { transform: translateY(0); }
@@ -20,7 +32,10 @@
     </style>
 </head>
 <body>
-    <!-- Phần tử chữ cần chuyển động -->
-    <p class="moving-text">An đẹp trai</p>
+    <!-- Phần tử container để căn giữa màn hình -->
+    <div class="container">
+        <!-- Phần tử chữ cần chuyển động -->
+        <p class="moving-text">An đẹpp traiii hihiii</p>
+    </div>
 </body>
 </html>
