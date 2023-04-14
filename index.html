@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>hihii</title>
+    <title>Chữ chạy khắp nơi</title>
     <style>
         .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
             height: 100vh;
             background-color: red;
+            overflow: hidden;
         }
 
         .rotating-text {
-            font-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 46px;
             color: yellow;
             animation: rotate 2s linear infinite;
         }
 
         @keyframes rotate {
             0% {
-                transform: rotate(0deg);
+                transform: translate(-50%, -50%) rotate(0deg);
             }
             100% {
-                transform: rotate(360deg);
+                transform: translate(-50%, -50%) rotate(360deg);
             }
         }
     </style>
@@ -30,7 +35,7 @@
 <body>
     <div class="wrapper">
         <div class="rotating-text">
-            An Dep Trai Co Mot Khong Hai
+            AnDepTrai Mot Khong Hai
         </div>
     </div>
 </body>
