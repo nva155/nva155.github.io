@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chữ chạy khắp nơi</title>
+    <title>Hihii vào đêy xem tớ à</title>
     <style>
         .wrapper {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             background-color: red;
-            overflow: hidden;
         }
 
-        .rotating-text {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            font-size: 46px;
+        .moving-text {
+            font-size: 45px;
             color: yellow;
-            animation: rotate 2s linear infinite;
+            animation: move 2s linear infinite;
         }
 
-        @keyframes rotate {
+        @keyframes move {
             0% {
-                transform: translate(-50%, -50%) rotate(0deg);
+                transform: translateX(-50%);
+            }
+            50% {
+                transform: translateX(50%);
             }
             100% {
-                transform: translate(-50%, -50%) rotate(360deg);
+                transform: translateX(-50%);
             }
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="rotating-text">
-            AnDepTrai Mot Khong Hai
+        <div class="moving-text">
+            An dep trai mot khong hai
         </div>
     </div>
 </body>
