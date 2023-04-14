@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>An number 1</title>
+    <title>hihii</title>
     <style>
-        /* Định dạng đại trà cho body và container */
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        .container {
+        .wrapper {
             display: flex;
-            align-items: center;
             justify-content: center;
-            height: 100%;
+            align-items: center;
+            height: 100vh;
+            background-color: red;
         }
 
-        /* Định nghĩa animation */
-        @keyframes moving-text {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-50px); }
+        .rotating-text {
+            font-size: 24px;
+            color: yellow;
+            animation: rotate 2s linear infinite;
         }
 
-        /* Áp dụng animation vào phần tử chữ cần chuyển động */
-        .moving-text {
-            font-size: 56px;
-            animation-name: moving-text;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Phần tử container để căn giữa màn hình -->
-    <div class="container">
-        <!-- Phần tử chữ cần chuyển động -->
-<div class="red-background">
-   
-</div>
-       <p class="moving-text">An dep traii mot khong hai</p>
+    <div class="wrapper">
+        <div class="rotating-text">
+            An Dep Trai Co Mot Khong Hai
+        </div>
     </div>
 </body>
 </html>
