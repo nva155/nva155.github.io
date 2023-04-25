@@ -45,12 +45,12 @@ tick();
 
 function Youtube() {
   setTimeout(function() {
-    window.open('https://www.youtube.com/channel/UCiSP9FWliPIwG-w59dJdilQ', 'ultimate')},
+    window.open('https://youtube.com/@nvaa1505', 'ultimate')},
   100);
 }
 function Facebook() {
   setTimeout(function() {
-    window.open('https://www.facebook.com/100035052735014', 'ultimate')},
+    window.open('https://www.facebook.com/nvaa1505', 'ultimate')},
   100);
 }
 function Discord() {
@@ -60,7 +60,7 @@ function Discord() {
 }
 function Telegram() {
   setTimeout(function() {
-    window.open('https://t.me/ThanhDieuChannel', 'ultimate')},
+    window.open('https://t.me/nvaa1505', 'ultimate')},
   100);
 }
 
